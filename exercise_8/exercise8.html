@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		/* A function that receives a string parameter and returns its inverse */
+
+		function reverseString(str) {
+
+		    var splitString = str.split("");                      // Use the split() method to return a new array
+		    var reverseArray = splitString.reverse("");           // Use the reverse() method to reverse the new created array
+		    var joinArray = reverseArray.join("");                // Use the join() method to join all elements of the array into a string
+
+		    return joinArray;                                     // Return the reversed string
+		}
+		console.log(reverseString("abc"));
+
+
+
+	/* Another method
+	
+		function reverseString(str) {
+		    var newString = "";                                    // Create an empty string that will host the new created string
+		    for (var i = str.length-1; i>=0; i--) {                // var i = str.length - 1, corresponds to the last character of the string, "c"
+		        newString = newString + str[i];
+		    }
+		    return newString;                                      // Return the reversed string
+		}
+		console.log(reverseString('abc'));
+	*/
+	</script>
+</head>
+<body>
+
+</body>
+</html>

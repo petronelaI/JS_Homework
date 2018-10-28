@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		/* A function that returns the product of the first N positive odd numbers */
+		 function productOddNumbers (n) {
+		 	var p = 1;                         
+			for (var i = 1; i<=n; i++) {
+			 		if (i % 2 == 1) {         // The condition to find odd numbers
+			 		p = p * i;
+			 	}
+		 	}
+		 	return p;
+		 }
+		 console.log(productOddNumbers(8));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		/* A function that checks whether there are duplicates in an array received as a parameter */
+		function duplicatesInArray(arr) {
+			for (var i = 0; i<=arr.length; i++) {
+				for(var j=0; j<=arr.length; j++){
+					if(i !== j && arr[i] === arr[j]) {
+						return "The array has duplicates!";
+					}
+				}
+			}
+			return "No duplicates in the array!";
+		}
+		console.log(duplicatesInArray([23, 55, 61, 3, 7, 3]));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

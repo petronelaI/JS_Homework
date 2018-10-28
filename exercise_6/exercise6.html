@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		/* A function that checks if N is the prime number */
+		function primeNumber(n) {
+			for (var i=2; i<n; i++) { //the lowest prime number is 2(except 2, all prime numbers are odd numbers)
+				if(n%i===0) { // if is false => odd number => prim number
+					return n + " is not a prim number;";
+				}	
+			}
+			return n + " is a prim number;";
+		}
+		console.log(primeNumber(17));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

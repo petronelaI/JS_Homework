@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		/* A function that returns the sum of the first N prime numbers */
+	function sumPrimeNumber(n) {  
+    	var s=0;
+    	var array=[];
+    	for (var i=2; array.length < n; i++) {             //(array.length < n) checks n prime numbers
+        	for (var j=2; array.length<n; j++) {             
+              	if(i===j) {                                //If i and j are equal it is a prime number
+                	s=s+i;
+                	array.push(i);                         //Push the prime numbers in the new array
+              	}
+              	if(i%j===0) {                              //If true break the loop and isn't prime
+                break;
+            	}
+        	}
+    	}
+    	return s + " is the sum of prim numbers;"
+  	}
+  	console.log(sumPrimeNumber(5)); 
+
+
+
+    /* The below code will return the sum of prime numbers, up to n
+    function sumPrimeNumber(n) {	
+  		var s=0;
+  		for (var i=2; i<=n; i++) {                         //Checks how many prime numbers are up to n
+    		for (var j=2; j<=i; j++) {             
+      			if(i===j) {                                
+        			s=s+i;
+      			}
+      			if(i%j===0) {                              
+        			break;
+      			}
+      		}
+    	}
+      	return s + " is the sum of prim numbers;";
+	}
+	console.log(sumPrimeNumber(10));
+	*/
+  	</script>
+
+</head>
+<body>
+
+</body>
+</html>

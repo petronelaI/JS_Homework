@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		/* A function that checks whether a string received as a parameter is palindrome (inverse == original, eg: abcba == abcba, abca! = acba */
+		function isPalindrome(str) {
+			var newStr = str.replace(/ /g,'').toLowerCase(); //Replace uppercase letters with lower case letters
+			if(str.length === 0){                            //A palindrome string can get to 0 after cutting from it
+				return "The string is palindrome";
+			} else if (newStr[0] !== str[str.length-1]) {    //The first letter from a palindrome string (after and befor cutting) should be the same
+				return "The string is not palindrome"
+			}
+			return isPalindrome(str.slice(1,str.length-1));  //Cuts the first and last letter of the string 
+		}
+		console.log(isPalindrome("abcba"));
+		console.log(isPalindrome("abca"));
+		console.log(isPalindrome("Mamam"));
+		console.log(isPalindrome("aaYYsyyaa"));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

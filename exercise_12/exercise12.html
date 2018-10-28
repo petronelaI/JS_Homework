@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		/* A function that returns the sum of max and min from an array received as a parameter */
+		function SumMaxMin(arr) {
+			var max = arr[0];
+			var min = arr[0];
+			var s = 0;
+			for(var i = 0; i < arr.length; i++) {
+				if(max < arr[i]) {
+					max = arr[i];
+				} else if (min > arr[i]) {
+					min = arr[i];
+					}
+			}
+				s = max + min;
+				return s;
+		}
+		console.log(SumMaxMin([1, 24, -3, 75, 80]));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

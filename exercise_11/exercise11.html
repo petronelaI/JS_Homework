@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		/* A function that returns the maximum from an array received as a parameter */
+		function maximumArray(arr) {
+			var max =-Infinity;                // max=-Infinity, to be able to compare any negative and positive numbers
+			for(var i=0; i<arr.length; i++){
+				if(max < arr[i]) {
+					max = arr[i];              //arr[i] - the element of the list
+				}
+			}
+			return max;
+		}
+		console.log(maximumArray([1,-10,3,100]));
+
+
+		/* Another method is to assign to max, the value of arr[0] - first element of the list
+
+			function maximumArray(arr) {
+			var max =arr[0];               
+			for(var i=0; i<arr.length; i++){
+				if(max < arr[i]) {
+					max = arr[i];              
+				}
+			}
+			return max;
+		}
+		console.log(maximumArray([1,-10,3,100]));
+		*/
+	</script>
+</head>
+<body>
+
+</body>
+</html>

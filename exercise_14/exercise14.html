@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		/* A function that returns the product of positive numbers to an array, received as a parameter */
+		function productPositiveN(arr) {
+			var newArray = [];
+			var prod = 1;
+			for(var i=0; i<=arr.length; i++) {
+				if(arr[i] >= 0) {
+					newArray.push(arr[i]);
+					prod = prod * arr[i];
+				}
+			}
+			return "The array with positive numbers is:" + " [" + newArray + "] " + "and the product of the numbers is = " + prod;
+		}
+		console.log(productPositiveN([3, 6, 1, -2, 7, -5]));
+	</script>
+<body>
+
+</body>
+</html>
