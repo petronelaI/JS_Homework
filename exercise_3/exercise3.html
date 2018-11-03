@@ -4,13 +4,11 @@
 		<script>
 			/* A function that receives 2 values and returns the maximum of 2 */
 			function maximum(x,y) {
-				var max=-Infinity;
-					if(max<x && x>y) {
-						max=x;
-					}else if(max<y && y>x) {
-						max=y;
+					if(x>y) {
+						return x;
+					}else if(y>x) {
+						return y;
 					}
-					return max;
 				}
 			console.log(maximum(-24,48));
 		</script>
