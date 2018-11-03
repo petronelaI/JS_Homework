@@ -2,12 +2,15 @@
 <html>
 <head>
 	<script>
-		/* A function that receives 2 parameters (array of integer number and x number) and checks if x exists in the array */
-		function checkArray ([y, x]) {
-			var checkX = Number.isInteger(x); //The Number.isInteger() method determines whether a value is an integer
-			return checkX;
-		}
-		console.log(checkArray([3.3, 4]));
+    /* A function that receives 2 parameters (array of integer number and x number) and checks if x exists in the array */
+    function checkArray (arr,x) {
+      for(var i=0; i<arr.length; i++) {
+        if(i===x){
+          return i + " exists in the array!";
+        }
+      }
+    }
+    console.log(checkArray([8, 4, 5, 9, 1], 5));
 	</script>
 </head>
 <body>
