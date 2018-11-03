@@ -4,13 +4,11 @@
 		<script>
 			/* A function that receives 2 values and returns the minimum of 2 */
 			function minimum(x,y) {
-				var min=-Infinity;
-					if(min<x && x<y) {
-						min=x;
-					}else if(min<y && y<x) {
-						min=y;
+					if(x<y) {
+						return x;
+					}else if(y<x) {
+						return y;
 					}
-					return min;
 				}
 			console.log(minimum(-8,-14));
 		</script>
