@@ -3,8 +3,29 @@
 <head>
 	<script>
 		/* A function that checks whether a string received as a parameter is palindrome (inverse == original, eg: abcba == abcba, abca! = acba */
+
 		function isPalindrome(str) {
-			var newStr = str.replace(/ /g,'').toLowerCase(); //Replace uppercase letters with lower case letters
+			var removeChar = /[\W_]/g;                             //    \W removes all non-alphanumeric characters and g flag is for global search
+			str = str.toLowerCase().replace(removeChar, '');       //Replace uppercase letters with lower case letters
+			for (var i = 0; i < str.length/2; i++) {
+			    if (str[i] !== str[str.length - 1 - i]) {
+			       return "The string is not palindrome";
+			    }
+			}
+			return "The string is palindrome";
+		}
+		console.log(isPalindrome("abcba"));
+		console.log(isPalindrome("abca"));
+		console.log(isPalindrome("A9 a 9A"));
+
+		
+	
+
+
+		/*another way
+
+		function isPalindrome(str) {
+			var newStr = str.replace(/ /g,'').toLowerCase(); 
 			if(str.length === 0){                            //A palindrome string can get to 0 after cutting from it
 				return "The string is palindrome";
 			} else if (newStr[0] !== str[str.length-1]) {    //The first letter from a palindrome string (after and befor cutting) should be the same
@@ -16,6 +37,8 @@
 		console.log(isPalindrome("abca"));
 		console.log(isPalindrome("Mamam"));
 		console.log(isPalindrome("aaYYsyyaa"));
+		*/
+
 	</script>
 </head>
 <body>
